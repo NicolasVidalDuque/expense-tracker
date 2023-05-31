@@ -117,7 +117,6 @@ function App() {
 
   function listElementDelete(event){
     const targetId = event.target.id
-    const one = monthDataState.expenses
     setMonthDataState(old => deletionFromArray(old, targetId))
   }
 
@@ -138,6 +137,26 @@ function App() {
       'value': elementObject.value,
       'sponsored': elementObject.sponsored
     })
+  }
+
+  function setDisplayMenu(element){
+    const target = element.parentElement.parentElement.parentElement.querySelector('.buttons');
+    const classList = target.className.split(' ');
+    let addClass;
+    let removeClass;
+    if(classList.includes('yes-display')){
+      addClass = 'no-display';
+      removeClass = 'yes-display';
+    } else {
+      addClass = 'yes-display';
+      removeClass = 'no-display';
+    }
+    const index = classList.indexOf(removeClass);
+    classList.splice(index);
+    classList.push(addClass);
+    target.className =  classList.join(' ');
+    
+    console.log(classList)
   }
 
   // Date declaration's
@@ -178,6 +197,7 @@ function App() {
           expenses = {monthDataState.expenses}
           listElementDelete = {listElementDelete}
           handleClickShowModal = {handleClickShowModal}
+          setDisplayMenu = {setDisplayMenu}
           />
       </Container>
       

@@ -8,6 +8,10 @@
     position: relative;
     min-height: 87vh;
 }
+
+#navbar{
+    background-color: white;
+}
 #warning--icon{
     position: absolute;
     z-index: -1;
@@ -20,15 +24,44 @@
     margin-top: 13vh;
     margin-bottom: 60px;
 }
+.list-element{
+    display:flex;
+}
+
+.buttons{
+    flex-direction: row;
+}
+
+.no-display{
+    display:none;
+}
+
+.yes-display{
+    display:flex;
+}
+
+.element-info{
+    width: 100%;
+}
+
+.MenuButton{
+    border: none;
+    width:40px;
+}
+
+.MenuButton, .DeleteButton, .EditButton{
+    background-color: transparent;
+}
+
+
+.DeleteButton, .EditButton{
+    border: 1px lightgray solid;
+    background-color: transparent;
+    width: 80px;
+}
 
 .fs-7{
     font-size: x-small;
-}
-
-nav{
-    box-shadow: 2px 9px 33px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 2px 9px 33px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 2px 9px 33px 0px rgba(0,0,0,0.75);
 }
 
 @media screen and (max-width:500px) {

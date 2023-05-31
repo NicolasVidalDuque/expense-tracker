@@ -17,6 +17,7 @@ function ExpenseList(props){
                     sponsoredAmount = {item.sponsoredAmount}
                     listElementDelete = {props.listElementDelete}
                     handleClickShowModal = {props.handleClickShowModal}
+                    setDisplayMenu = {props.setDisplayMenu}
                 />
             )
         }
