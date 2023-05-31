@@ -155,8 +155,6 @@ function App() {
     classList.splice(index);
     classList.push(addClass);
     target.className =  classList.join(' ');
-    
-    console.log(classList)
   }
 
   // Date declaration's

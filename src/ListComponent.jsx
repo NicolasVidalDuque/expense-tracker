@@ -13,10 +13,10 @@ function listComponent(props){
             <Stack  className='element-info px-2 py-1' direction='horizontal' gap='2' style={{backgroundColor: color}}>
                 <button className="MenuButton" onClick={(event) => {props.setDisplayMenu(event.target)}}> <img src={menu_icon}/></button>
                 <Stack className="title-date" gap='0'>
-                    <h6 className="my-0 text-uppercase">{props.title}</h6>
-                    <p className="fs-7 text-muted mb-1">{props.date}</p>
+                    <h6 className="my-0 mt-1 text-uppercase">{props.title}</h6>
+                    <p className="fs-7 text-muted my-0">{props.date}</p>
                 </Stack>
-                <h2>{props.value}</h2>
+                <h2 className="my-0">{props.value}</h2>
             </Stack>
         </div>
     )
