@@ -10,7 +10,6 @@ import { Container } from 'react-bootstrap'
 import WarningIcon from './WarningIcon'
 
 // TODO: 
-//  Edit elements
 //  Create a data base, comunicate, load data, request data, edit data.
 
 function App() {
@@ -165,8 +164,8 @@ function App() {
   useEffect(() => updateInfo(),[monthDataState.expenses])
 
   return (
-    <div className="App" >
-      <Navbar 
+    <div id="AppDiv" className="App" >
+      <Navbar
         amountLeft={currencyFormater.format(monthDataState.available)}
         totalExpense={currencyFormater.format(monthDataState.total)}
         budget={currencyFormater.format(monthDataState.budget)}
@@ -174,7 +173,7 @@ function App() {
         sponsoredAmount = {currencyFormater.format(monthDataState.sponsoredAmount)}
       />
 
-      <Container fluid className='px-0'>
+      <Container fluid className='px-0 py-3'>
         <ExpenseList 
           expenses = {monthDataState.expenses}
           listElementDelete = {listElementDelete}

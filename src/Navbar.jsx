@@ -12,7 +12,7 @@ function Navbar(props){
     const percentage = props.percentage.toFixed(1)
     
     return(
-        <nav className='fixed-top pt-3'>   
+        <nav id="navbar" className='fixed-top pt-3'>   
             <Stack>
                 <Stack  className='px-1 d-flex justify-content-between' direction='horizontal'>
                     <h2 className='my-0'>Available</h2>
