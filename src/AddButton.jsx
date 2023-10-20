@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 
-function Footer(props){
+function AddButton(props){
     return(
         <footer id="footer" className="px-2 d-grid fixed-bottom bg-light">
             <Button onClick={() => {props.handleClickShowModal(false)}} className='my-2' variant='primary' size='lg'>Add</Button>
@@ -9,4 +9,4 @@ function Footer(props){
     )
 }
 
-export default Footer
+export default AddButton; 
